@@ -1,0 +1,55 @@
+extends layout
+
+block content
+    h1= title
+    p Create a Project
+
+    // Wrapper
+    #wrapper
+        // USER INFO
+        #projectInfo
+            h2 Project Information
+            p
+                strong Project Name:
+                |  <span id='projectInfoName'></span>
+                br
+                strong Date:
+                |  <span id='projectInfodate'></span>
+                br
+                strong Project Length:
+                |  <span id='projectInfolength'></span>
+                br
+                strong Location:
+                |  <span id='userInfoLocation'></span>
+        // /USER INFO
+
+
+        // PROJECT LIST
+        h2 Project List
+        #projectList
+            table
+                thead
+                    th Project Name	
+                    th Date
+                    th Delete
+                    th Edit
+                tbody
+        // /PROJECT LIST
+
+        // ADD PROJECT
+        h2 Add New Project
+        #addProject
+            fieldset
+                input#inputProjectName(type='text', placeholder='Project Name')
+                input#inputDate(type='text', placeholder='Date')
+                br
+                input#inputProjectLength(type='text', placeholder='Project Length')
+                input#inputLocation(type='text', placeholder='Location')
+                
+                button#btnAddProject Add Project
+        // /ADD PROJECT
+
+
+
+
+    // /WRAPPER
